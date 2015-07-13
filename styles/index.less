@@ -11,6 +11,7 @@
     }
     .header {
         background: url("../images/header-bg.png") repeat;
+        background: #4C7675\9;
         position: fixed;
         z-index: 9999;
         top: 0;
@@ -36,6 +37,8 @@
             }
             ul {
                 float: right;
+                width: 320px;
+                height: 85px;
                 a li {
                     float: left;
                     height: 85px;
@@ -144,6 +147,7 @@
             background-position: 0 0;
             position: absolute;
             right: 235px;
+            right: 185px \9;
             top: 180px;
             z-index: 2;
             opacity: 0;
@@ -153,6 +157,7 @@
             width: 224px;
             height: 260px;
             right: -3px;
+            right: 47px \9;
             top: 170px;
             z-index: 2;
         }
@@ -534,11 +539,12 @@
         background: #fff;
         width: 100%;
         height: 405px;
-        .circle-box {
+        a.circle-box {
             width: 185px;
             text-align: center;
             margin: 70px 220px 0 50px;
             float: left;
+            text-decoration: none;
             .icon-bg .icon1, .icon-bg .icon1_1, .icon-bg .icon2, .icon-bg .icon2_1, .icon-bg .icon3, .icon-bg .icon3_1, .icon-bg {
                 background: url("../images/circle.png") no-repeat;
                 width: 185px;
@@ -551,6 +557,7 @@
                 font-size: 20px;
                 font-weight: 100;
                 padding-top: 25px;
+                color: #333;
                 -webkit-transition: all .3s ease-in;
                 -moz-transition: all .3s ease-in;
                 -ms-transition: all .3s ease-in;
@@ -559,11 +566,11 @@
             }
             .icon-bg {
                 background-position: 0 -555px;
-                -webkit-transition: all .3s ease-in;
-                -moz-transition: all .3s ease-in;
-                -ms-transition: all .3s ease-in;
-                -o-transition: all .3s ease-in;
-                transition: all .3s ease-in;
+                //-webkit-transition: all .3s ease-in;
+                //-moz-transition: all .3s ease-in;
+                //-ms-transition: all .3s ease-in;
+                //-o-transition: all .3s ease-in;
+                //transition: all .3s ease-in;
                 .icon1 {
                     background-position: 0 0;
                 }
@@ -574,38 +581,37 @@
                     background-position: 0 -370px;
                 }
             }
-            &:hover {
-                .icon-bg {
-                    background-position: -185px -555px;
-                    -webkit-transition: all .3s ease-out;
-                    -moz-transition: all .3s ease-out;
-                    -ms-transition: all .3s ease-out;
-                    -o-transition: all .3s ease-out;
-                    transition: all .3s ease-out;
-                    .icon1 {
-                        background-position: -185px 0;
-                    }
-                    .icon2 {
-                        background-position: -185px -185px;
-                    }
-                    .icon3 {
-                        background-position: -185px -370px;
-                    }
-                }
-                p {
-                    color: #3ddfdf;
-                    -webkit-transition: all .3s ease-out;
-                    -moz-transition: all .3s ease-out;
-                    -ms-transition: all .3s ease-out;
-                    -o-transition: all .3s ease-out;
-                    transition: all .3s ease-out;
-                }
-            }
-
             &.last-child {
                 margin-right: 0;
             }
-        }
+        }a:hover.circle-box {
+             .icon-bg {
+                 background-position: -185px -555px;
+                 //-webkit-transition: all .3s ease-out;
+                 //-moz-transition: all .3s ease-out;
+                 //-ms-transition: all .3s ease-out;
+                 //-o-transition: all .3s ease-out;
+                 //transition: all .3s ease-out;
+
+                 .icon1 {
+                     background-position: -185px 0;
+                 }
+                 .icon2 {
+                     background-position: -185px -185px;
+                 }
+                 .icon3 {
+                     background-position: -185px -370px;
+                 }
+             }
+             p {
+                 color: #3ddfdf;
+                 -webkit-transition: all .3s ease-out;
+                 -moz-transition: all .3s ease-out;
+                 -ms-transition: all .3s ease-out;
+                 -o-transition: all .3s ease-out;
+                 transition: all .3s ease-out;
+             }
+         }
 
     }
     .kw-bottom {
@@ -991,42 +997,42 @@
             i.icson10 {
                 margin: 88px 0 0 203px;
             }
-            a.btn1,a.btn2,a.btn3,a.btn4,a.btn5{
+            a.btn1, a.btn2, a.btn3, a.btn4, a.btn5 {
                 position: absolute;
                 top: 0;
                 left: 0;
                 width: 270px;
                 height: 90px;
             }
-            a.btn2{
+            a.btn2 {
                 top: 90px;
             }
-            a.btn3{
+            a.btn3 {
                 top: 190px;
             }
-            a.btn4{
+            a.btn4 {
                 top: 290px;
             }
-            a.btn5{
+            a.btn5 {
                 top: 390px;
             }
-            a.btn6,a.btn7,a.btn8,a.btn9,a.btn10{
+            a.btn6, a.btn7, a.btn8, a.btn9, a.btn10 {
                 position: absolute;
                 top: 119px;
                 right: 0;
                 width: 280px;
                 height: 90px;
             }
-            a.btn7{
+            a.btn7 {
                 top: 227px;
             }
-            a.btn8{
+            a.btn8 {
                 top: 324px;
             }
-            a.btn9{
+            a.btn9 {
                 top: 426px;
             }
-            a.btn10{
+            a.btn10 {
                 top: 520px;
             }
         }
@@ -1434,9 +1440,9 @@
         _position: absolute;
         _top: 13%;
         _margin-top: 0;
-        background-color: #fff;
+        background: #fff;
         -webkit-background-clip: padding-box;
-        -moz-background-clip: padding-box;
+        //-moz-background-clip: padding-box;
         background-clip: padding-box;
         outline: none;
         .artDialog-body {
@@ -1482,10 +1488,11 @@
         bottom: 0;
         left: 0;
         z-index: 999991;
-        background-color: #000;
+        background: #000;
+        background: transparent\9;
         opacity: .4;
     }
-    .footer {
+    .footer{
         width: 100%;
         min-width: 1200px;
         padding: 30px 0;
@@ -1511,7 +1518,8 @@
 
             }
             a.weixin {
-                background-position: -821px -293px
+                background-position: -821px -293px;
+                margin: 28px 0 0;
             }
             a:hover.weibo, a:hover.weixin {
                 -webkit-transform: rotate(360deg);

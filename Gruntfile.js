@@ -9,6 +9,18 @@ module.exports = function (grunt) {
         //    all: ['dist/*']
         //},
 
+        less: {
+            task1:{
+                options: {
+                    compress: false,
+                    yuicompress: false
+                },
+                expand: true,
+                src   : ['styles/*.less'],
+                dest  : './',
+                ext   : '.css'
+            }
+        },
 
         jshint    : {
             //files: ['src/pages/<%= grunt.config.get("page") %>/*.js'],
@@ -88,7 +100,8 @@ module.exports = function (grunt) {
                             selector: 'body',
                             html    : '<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>' +
                             '<script type="text/javascript" src="scripts/index-<%= pkg.timestamp %>.js"></script>' +
-                            '<script type="text/javascript" src="scripts/jquery-fadethis-<%= pkg.timestamp %>.js"></script>'
+                            '<script type="text/javascript" src="scripts/jquery-fadethis-<%= pkg.timestamp %>.js"></script>'+
+                            '<script type="text/javascript" src="scripts/statistics-<%= pkg.timestamp %>.js"></script>'
 
                         }
                     ],
@@ -110,7 +123,8 @@ module.exports = function (grunt) {
                             selector: 'body',
                             html    : '<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>' +
                             '<script type="text/javascript" src="bower_components/swiper/dist/js/swiper.jquery.min.js"></script>' +
-                            '<script type="text/javascript" src="scripts/index-<%= pkg.timestamp %>.js"></script>'
+                            '<script type="text/javascript" src="scripts/index-<%= pkg.timestamp %>.js"></script>'+
+                            '<script type="text/javascript" src="scripts/statistics-<%= pkg.timestamp %>.js"></script>'
                         }
                     ],
                     prepend: [
@@ -131,7 +145,8 @@ module.exports = function (grunt) {
                             selector: 'body',
                             html    : '<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>' +
                             '<script type="text/javascript" src="scripts/superslide-<%= pkg.timestamp %>.js"></script>'+
-                            '<script type="text/javascript" src="scripts/index-<%= pkg.timestamp %>.js"></script>'
+                            '<script type="text/javascript" src="scripts/index-<%= pkg.timestamp %>.js"></script>'+
+                            '<script type="text/javascript" src="scripts/statistics-<%= pkg.timestamp %>.js"></script>'
 
                         }
                     ],
@@ -175,6 +190,7 @@ module.exports = function (grunt) {
      */
 
     grunt.registerTask('build', [
+        'less:task1',
         'jshint:files',
         'copy:files',
         'uglify:common',

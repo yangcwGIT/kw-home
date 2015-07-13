@@ -4,7 +4,7 @@
   "dependencies": {
     "fullpage.js": "~2.6.2",
     "jquery-ui": "~1.10.*",
-    "jquery": "~2.*.*"
+    "jquery": "~1.*.*"
 
   }
 }

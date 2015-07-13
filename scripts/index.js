@@ -1,7 +1,7 @@
 /**
  * Created by Guoxing.han on 2015/7/7 0007.
  */
-jQuery(function () {
+$(function () {
     var indexHome = {
         init: function () {
             this.eventHandler();
@@ -14,7 +14,7 @@ jQuery(function () {
         }
     };
 
-    jQuery.extend(indexHome, {
+    $.extend(indexHome, {
         eventHandler: function () {
             var winHeight = $(document).scrollTop();
             $(window).scroll(function () {
