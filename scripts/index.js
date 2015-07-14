@@ -72,9 +72,11 @@ $(function () {
         aboutPage   : function () {
             $(".j_close-btn").on("click", function () {
                 $("#J_alert_win").fadeOut(300);
+                $('video').trigger('pause');
             });
             $("#J_open-play").on("click", function () {
                 $("#J_alert_win").fadeIn(300);
+                $('video').trigger('play');
             });
             var swiper = new Swiper('.swiper-container', {
                 autoplay                    : 3000,
